@@ -1,0 +1,38 @@
+@import "../../../static/styles/dimens.module.scss";
+@import "../../../static/styles/colors.module.scss";
+
+.cardImage {
+  width: $cardImageSide;
+  height: $cardImageSide;
+  margin-right: $sideMargin;
+  float: left;
+}
+
+.cardBody {
+  padding-top: $textPadding;
+  height: $cardImageSide;
+  display: inline-block;
+  float: left;
+}
+
+.card {
+  border: $borderWidth solid $borderColor;
+  border-radius: $borderRadius;
+  width: 45%;
+  float: left;
+  margin: 1rem 2.5%;
+}
+
+a.userPageButton {
+  background-color: $userPageButtonColor;
+  border-color: $userPageButtonColor;
+  &:hover, &:active {
+    background-color: $userPageButtonHoverColor;
+    border-color: $userPageButtonHoverColor;
+  }
+  &:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    color: white;
+  }
+}
