@@ -32,14 +32,18 @@ export default {
         include: path.join(__dirname, 'src'),
         use: ['babel-loader']
       }, {
-        test: /^((?!\.module).)*(scss|css)$/,
-        loader: 'style-loader!css-loader'
+        test: /\.(scss|css)$/,
+        loader: 'style-loader!css-loader',
+        include: [/node_modules/],
+        exclude: [/src/]
       }, {
-        test: /\.module\.(scss|css)/,
+        test: /\.(scss|css)/,
         use: [
           'style-loader?sourceMap',
           'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
-          'sass-loader']
+          'sass-loader'],
+        exclude: [/node_modules/],
+        include: [/src/]
       }, {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader'

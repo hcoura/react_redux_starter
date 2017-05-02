@@ -38,16 +38,21 @@ export default {
         include: path.join(__dirname, 'src'),
         use: ['babel-loader']
       }, {
-        test: /^((?!\.module).)*(scss|css)$/,
+        test: /\.(scss|css)$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'})
+          use: 'css-loader'
+        }),
+        include: [/node_modules/],
+        exclude: [/src/]
       }, {
-        test: /\.module\.(scss|css)/,
+        test: /\.(scss|css)/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
-        })
+        }),
+        exclude: [/node_modules/],
+        include: [/src/]
       }, {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader'

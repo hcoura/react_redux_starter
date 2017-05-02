@@ -32,7 +32,6 @@
     "no-console": 1,
     "no-debugger": 1,
     "no-var": 1,
-    "class-methods-use-this": 2,
     "semi": [2, "always"],
     "no-trailing-spaces": 0,
     "eol-last": 0,

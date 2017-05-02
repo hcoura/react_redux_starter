@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import styles from './search.module.scss';
+import styles from './search.scss';
 import SearchBar from '../../common/SearchBar';
 import UserListItem from './UserListItem';
 

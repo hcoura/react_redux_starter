@@ -7,7 +7,7 @@ import {Router} from 'react-router';
 import {createBrowserHistory} from 'history';
 import configureStore from './store/configureStore';
 import routes from './routes';
-import './static/styles/global.module.scss';
+import './static/styles/global.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 
